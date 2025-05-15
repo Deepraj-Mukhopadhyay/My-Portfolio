@@ -44,17 +44,17 @@ body {
   color: white;
   background: none;
   border: none;
-  font-size: 1.2
+  font-size: 1.1
   rem;
   cursor: pointer;
   text-decoration: none;
- transition: all 1.5s ease; /* Smooth animation */
+ transition: all 0.2s ease; /* Smooth animation */
 }
 
 /* Hover effect */
 .nav-links a:hover,
 .nav-links button:hover {
-  font-size: 1.2rem; /* Bigger size on hover */
+  font-size: 1.5rem; /* Bigger size on hover */
 }
 
 
