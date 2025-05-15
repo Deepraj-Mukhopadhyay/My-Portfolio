@@ -118,9 +118,14 @@ button[type=\"submit\"] {
   cursor: pointer;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: var(--primary-color);
-  color: white;
+footer a {
+  color: #333;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #0077b5; /* LinkedIn Blue or any color you prefer */
 }
