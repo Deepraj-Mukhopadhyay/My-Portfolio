@@ -1,15 +1,14 @@
 :root {
   --bg-color: #f9f9f9;
   --text-color: #111;
-  --primary-color: #004e98;
+  --primary-color: hwb(115 9% 26%);
   --card-color: #fff;
 }
 
-/* Dark mode activated by Bootstrap-compatible class */
-body.dark-mode {
-  --bg-color: #121212;
-  --text-color: #f9f9f9;
-  --primary-color: #90e0ef;
+body.dark {
+  --bg-color: #000000;
+  --text-color: #f6fafc;
+  --primary-color: #d425eb;
   --card-color: #1e1e1e;
 }
 
@@ -21,27 +20,44 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Custom Navbar overrides */
 .navbar {
-  background: var(--primary-color) !important;
-}
-
-.navbar .navbar-brand {
-  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-color);
   color: white;
+  padding: 1rem 2rem;
 }
 
-.navbar-nav .nav-link,
-#toggle-mode {
-  color: white !important;
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.navbar-nav .nav-link:hover,
-#toggle-mode:hover {
-  text-decoration: underline;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
 }
 
-/* Section Styling */
+.nav-links a, .nav-links button {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 1.2
+  rem;
+  cursor: pointer;
+  text-decoration: none;
+ transition: all 1.5s ease; /* Smooth animation */
+}
+
+/* Hover effect */
+.nav-links a:hover,
+.nav-links button:hover {
+  font-size: 1.2rem; /* Bigger size on hover */
+}
+
+
 .section {
   padding: 3rem 1rem;
   max-width: 1000px;
@@ -56,22 +72,15 @@ h2 {
   color: var(--primary-color);
 }
 
-/* Skill list and card design */
-.skill-list li,
-.project-card,
-.card,
-.list-group-item {
-  margin-bottom: 1rem;
+.skill-list li, .project-card {
+  margin: 0.5rem 0;
   background: var(--card-color);
   padding: 1rem;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  color: var(--text-color);
 }
 
-/* Button Styling */
-.btn,
-button[type="submit"] {
+.btn {
   background: none;
   border: 2px solid var(--primary-color);
   color: var(--text-color);
@@ -79,24 +88,20 @@ button[type="submit"] {
   border-radius: 4px;
   cursor: pointer;
   text-decoration: none;
-  transition: background 0.3s, color 0.3s;
 }
 
-.btn:hover,
-button[type="submit"]:hover {
+.btn:hover {
   background: var(--primary-color);
   color: white;
 }
 
-/* Form elements */
 form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-input,
-textarea {
+input, textarea {
   padding: 0.75rem;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -104,7 +109,15 @@ textarea {
   color: var(--text-color);
 }
 
-/* Footer */
+button[type=\"submit\"] {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 footer {
   text-align: center;
   padding: 1rem;
